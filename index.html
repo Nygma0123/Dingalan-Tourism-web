@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dingalan Tourism Information Website</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#home" class="logo-link">
+                <img src="logo.png" alt="Dingalan logo" class="logo-img">
+                <span>
+                    <b class="logo-title">Dingalan</b>
+                    <small class="logo-subtitle">TOURISM PORTAL</small>
+                </span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#explore">Explore</a>
+                <a href="#booking">Booking</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="#booking" class="btn-primary">Book Now</a>
+        </div>
+    </header>
+
+    <!-- HOME / HERO SECTION -->
+    <section id="home" class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <p class="hero-tag">Aurora, Philippines</p>
+                <h1 class="hero-title">Discover <span>Dingalan</span></h1>
+                <p class="hero-desc">
+                    Explore the coastal communities, scenic views, and natural attractions of Dingalan, Aurora.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#explore" class="btn-light">Explore Places</a>
+                    <a href="https://dingalan.gov.ph/" target="_blank" rel="noopener noreferrer" class="btn-outline">Learn More</a>
+                </div>
+            </div>
+
+            <!-- IMAGE CAROUSEL -->
+            <div class="carousel-wrapper">
+                <div class="carousel-box">
+                    <img id="heroImage" class="hero-photo" src="poblacion.png" alt="Feeder Port">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption">
+                        <h2 id="heroTitle">Feeder Port</h2>
+                        <p>Explore Dingalan</p>
+                    </div>
+                    <button id="prevBtn" aria-label="Previous photo" class="carousel-btn prev-btn">‹</button>
+                    <button id="nextBtn" aria-label="Next photo" class="carousel-btn next-btn">›</button>
+                </div>
+                <div class="carousel-footer">
+                    <span id="slideCount">01 / 06</span>
+                    <div id="carouselDots" class="carousel-dots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPLORE / DESTINATIONS SECTION -->
+    <section id="explore" class="explore-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Explore Dingalan</p>
+                <h2>Featured Barangays</h2>
+                <p>Discover these six selected communities and places in Dingalan, Aurora.</p>
+            </div>
+            <div id="destinationGrid" class="destination-grid"></div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking" class="booking-section">
+        <div class="booking-container">
+            <div class="booking-card">
+                <div class="section-header">
+                    <p class="section-tag">Plan your visit</p>
+                    <h2>Book Your Dingalan Tour</h2>
+                    <p>Fill in the details to send a reservation request.</p>
+                </div>
+
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="bookName">Full Name</label>
+                        <input id="bookName" required type="text" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookEmail">Email Address</label>
+                        <input id="bookEmail" required type="email" placeholder="yourname@email.com">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookDestination">Destination / Barangay</label>
+                            <select id="bookDestination" required>
+                                <option value="" disabled selected>Select place</option>
+                                <option>Feeder Port</option>
+                                <option>Aplaya</option>
+                                <option>Butas na Bato</option>
+                                <option>Ibona</option>
+                                <option>Matawe</option>
+                                <option>Umiray</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookDate">Tour Date</label>
+                            <input id="bookDate" required type="date">
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-full" type="submit">Submit Booking Request</button>
+                </form>
+
+                <p id="bookingSuccess" class="success-msg hidden">
+                    Your booking request has been recorded in this page. Please contact the tourism office to confirm your reservation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US / TEAM SECTION -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Behind the project</p>
+                <h2>Our Development Team</h2>
+                <p>The people behind the Dingalan Tourism Information Website.</p>
+            </div>
+            <div id="teamGrid" class="team-grid"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT SECTION -->
+    <footer id="contact" class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="logo.png" alt="Dingalan logo" class="footer-logo">
+                <div>
+                    <h3>Dingalan Tourism</h3>
+                    <p>A tourism information website featuring selected destinations and barangays in Dingalan, Aurora.</p>
+                </div>
+            </div>
+
+            <div class="footer-contact-info">
+                <h4>Contact Us</h4>
+                <p><strong>Address:</strong> Municipal Tourism Office, Dingalan, 3207 Aurora, Philippines</p>
+                <p><strong>Phone:</strong> +63 917 122 4567 / (042) 789-0123</p>
+                <p><strong>Email:</strong> tourism@dingalan.gov.ph</p>
+                <p><strong>Office Hours:</strong> Monday - Sunday, 7:00 AM - 6:00 PM</p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#explore">Explore</a>
+                    <a href="#booking">Booking</a>
+                    <a href="#about">About Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            © 2026 Dingalan Tourism Information Website
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
